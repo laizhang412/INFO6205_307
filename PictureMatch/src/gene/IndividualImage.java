@@ -28,9 +28,6 @@ public class IndividualImage{
 		for(int i = 0; i < parameter.geneNum; i++) {
 			this.dna.add(randomPolygon());
 		}
-		
-		// Express DNA
-		draw();
 	}
 	
 	public void draw() {
