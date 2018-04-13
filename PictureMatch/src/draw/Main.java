@@ -15,7 +15,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Image img = ImageIO.read(new File("target3.jpg"));
 		BufferedImage bi1 = (BufferedImage) img;
-		Parameters p = new Parameters(bi1.getWidth(),bi1.getHeight(),20,100,3,bi1,2);
+		Parameters p = new Parameters(bi1.getWidth(),bi1.getHeight(),20,1000,3,bi1,2);
 		
 		Population gen = new Population(p);
 		int i = 1;

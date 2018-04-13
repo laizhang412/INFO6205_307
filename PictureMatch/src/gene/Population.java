@@ -13,7 +13,9 @@ public class Population {
 		this.parameter = parameter;
 		this.imageList = new ArrayList<IndividualImage>();
 		for(int i = 0; i < parameter.populationNum; i++) {
-			this.imageList.add(new IndividualImage(parameter));
+			IndividualImage img = new IndividualImage(parameter);
+			img.draw();
+			this.imageList.add(img);
 		}
 		this.random = new Random();
 	}
@@ -33,10 +35,10 @@ public class Population {
 	public IndividualImage crossOver() {
 		IndividualImage img = new IndividualImage(parameter);
 		img.dna.clear();
-//		PriorityQueue<IndividualImage> pq = getPQ();
-		IndividualImage first = selection();
+		PriorityQueue<IndividualImage> pq = getPQ();
+		IndividualImage first = pq.peek()
 //		System.out.println("First Parent Image Fitness: " + first.fitness());
-		IndividualImage second = selection();
+		IndividualImage second = new IndividualImage(parameter);
 //		System.out.println("Second Parent Image Fitness: " + second.fitness());
 		for(int i = 0; i < this.parameter.geneNum; i++) {
 			if(this.random.nextDouble() > .5) {
@@ -49,6 +51,7 @@ public class Population {
 				img.dna.add(polygon);
 			}
 		}
+		img.draw();
 		return img;
 	}
 	
