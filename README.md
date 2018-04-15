@@ -1,5 +1,8 @@
 # Topic: Painting A Picture
 
+#### Team Memeber: Lai Zhang, Sijie Tang
+
+
 ## PROBLEM STATEMENT:
 By using genetic algorithm, we want to implement a randomly generated image envolved into a target image.
 An image(DNA) consists multiple polygons(genes) and a list of images(DNAs) compose a population. For each time of evolution, we choose the best two images, then use both asexual and sexual reproduction with mutations, a better generation of population is born. After numbers of generation, the initial image will finally resemble the target image.
